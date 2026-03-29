@@ -11,7 +11,7 @@ jobs:
           ref: main
 
       - name: get pem file
-        run:
+        run: |
           echo "${{secrets.secret_key}}" > Cloudchasers-7key.pem
           chmod 400 Cloudchasers-7key.pem
           ls -lrsth
