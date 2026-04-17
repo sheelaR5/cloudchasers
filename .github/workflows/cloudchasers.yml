@@ -12,7 +12,7 @@ jobs:
 
       - name: get pem file
         run: |
-          echo "${{secrets.sheela_key}}" > sheela--r.pem
+          echo "${{ secrets.sheela_key}}" > sheela--r.pem
           chmod 400 sheela--r.pem
           ls -lrsth
       - name: cp app.py
