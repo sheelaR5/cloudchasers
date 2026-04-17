@@ -13,7 +13,7 @@ jobs:
       - name: get pem file
         run: |
           echo "${{secrets.sheela_key}}" > sheela--r.pem
-          chmod 400 Cloudchasers-7key.pem
+          chmod 400 sheela--r.pem
           ls -lrsth
       - name: cp app.py
         run: scp -o StrictHostKeyChecking=no -i sheela--r.pem app.py ec2-user@13.233.173.99:/home/ec2-user/
